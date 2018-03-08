@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/basic/test.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'font/icon/iconfont.css' %}">
-    <link rel="stylesheet" type="text/css" href="at.alicdn.com/t/font_573684_ejhst516wgb65hfr.css"}
-    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <link rel="stylesheet" type="text/css" href="at.alicdn.com/t/font_573684_ejhst516wgb65hfr.css">
+
 
 </head>
 <body>
@@ -97,9 +97,38 @@
     </div>
 </div>
 
-
 <script src="{% static 'js/jquery.min.js'%}"></script>
-<script src="{% static 'semantic/semantic.min.js'%}"></script>
+    <script src="{% static 'semantic/semantic.min.js'%}"></script>
+<script src="{% static 'js/basic/tagSelect.js'%}"></script>
+<script>
+    $(function(){
+        new SelectTag({
+            child : ".sx_child", //所有筛选范围内的子类
+            over : 'on', //选中状态样式名称
+            all : ".all"
+        });
+    })
+</script>
+
+{#筛选条#}
+<script>
+  $(document)
+    .ready(function() {
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+      $('.ui.menu a.item')
+        .on('click', function() {
+          $(this)
+            .addClass('active')
+            .siblings()
+            .removeClass('active')
+          ;
+        })
+      ;
+    })
+  ;
+  </script>
 <script>
     $(function () {
         $(".news .news-content a").mouseover(function () {
@@ -210,36 +239,5 @@
     })
 </script>
 
-
-<script src="{% static 'js/basic/tagSelect.js'%}"></script>
-<script>
-    $(function(){
-        new SelectTag({
-            child : ".sx_child", //所有筛选范围内的子类
-            over : 'on', //选中状态样式名称
-            all : ".all"
-        });
-    })
-</script>
-
-{#筛选条#}
-<script>
-  $(document)
-    .ready(function() {
-      $('.ui.menu .ui.dropdown').dropdown({
-        on: 'hover'
-      });
-      $('.ui.menu a.item')
-        .on('click', function() {
-          $(this)
-            .addClass('active')
-            .siblings()
-            .removeClass('active')
-          ;
-        })
-      ;
-    })
-  ;
-  </script>
 </body>
 </html>

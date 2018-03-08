@@ -155,3 +155,4 @@ body{margin: 0;color: #565a5c ;}
     /*background-color: #0e8c8c;*/
 }
 .margin-updown-10{margin-top:10px;margin-bottom:10px;}
+.error-red-text{margin:-10px auto 5px -190px;color: red;}

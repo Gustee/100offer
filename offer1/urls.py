@@ -37,6 +37,15 @@ urlpatterns = [
     path('career_info/',uv.career_info),
     path('experience/',uv.experience),
     path('resume/basic/',rv.basic),
+    path('resume/test/',rv.test),
+    path('resume/test2/',rv.test2),
+    path('resume/career/',rv.career),
+    path('resume/experience/',rv.experience),
+    path('resume/info/',rv.info),
+    path('resume/self_intro/',rv.self_intro),
+    path('resume/showcase/',rv.showcase),
+    path('resume/skill/',rv.skill),
+    path('resume/social_media/', rv.social_media),
     path('signin/',uv.signin),
     path('signup/',uv.signup)
 ]
