@@ -1,15 +1,17 @@
 //注册按钮
     //应聘者
 $("#signup-button-applicant").click(function () {
-        var username = $("#username").val();
-        var mailaddress = $("#mailaddress").val();
-        var password = $("#password").val();
-        var password2 = $("#password2").val;
+        var username = $("#can-username").val();
+        var mailaddress = $("#can-mailaddress").val();
+        var password = $("#can-password").val();
+        var password2 = $("#can-password2").val;
         if (password == password2) {
             $(".error-red-text").text("两次密码输入不同").show();
             return;
         }
-        if (username.length < 5 || password.length < 6) {
+        if (username.length < 2 || password.length < 6) {
+            console.log(username)
+            console.log(password)
             console.log("账号或密码格式不对");
             $(".error-red-text").text("账号或密码格式不对").show();
         } else {
@@ -19,9 +21,9 @@ $("#signup-button-applicant").click(function () {
 
                 data: {
                     "type": "applicant",
-                    "username": $("#username").val(),
-                    "password": $("#password").val(),
-                    "mailaddress": $("#mailaddress").val(),
+                    "username": username,
+                    "password": password,
+                    "mailaddress": mailaddress,
                     "csrfmiddlewaretoken": $('[name=csrfmiddlewaretoken]').val()
                 },
                 success: function (data) {
@@ -39,18 +41,18 @@ $("#signup-button-applicant").click(function () {
     });
     //hr
 $("#signup-button-hr").click(function () {
-    var username = $("#username").val();
-    var mailaddress = $("#mailaddress").val();
-    var password = $("#password").val();
-    var password2 = $("#password2").val;
+    var username = $("#hr-username").val();
+    var mailaddress = $("#hr-mailaddress").val();
+    var password = $("#hr-password").val();
+    var password2 = $("#hr-password2").val;
     if (password == password2) {
         $(".error-red-text").text("两次密码输入不同").show();
         return;
     }
-    var companyname = $("#companyname").val();
-    var job = $("#job").val();
-    var phone = $("#phone").val();
-    if (username.length < 5 || password.length < 6) {
+    var companyname = $("#hr-companyname").val();
+    var job = $("#hr-job").val();
+    var phone = $("#hr-phone").val();
+    if (username.length < 2 || password.length < 6) {
         console.log("账号或密码格式不对");
         $(".error-red-text").text("账号或密码格式不对").show();
     } else {
