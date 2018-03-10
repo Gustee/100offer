@@ -1,6 +1,6 @@
 body {
 	width: 100%;
-	min-width: 1300px;
+	min-width: 1500px;
 	margin: 0;
 	background-color: #ededef;
 	font-family: "Open Sans", sans-serif;
@@ -18,7 +18,7 @@ li.top {
 ul.top{
 	width:50%;
 	float: left;
-	text-align: : center;
+	text-align: center;
 /*	background: red;*/
 	padding-left: 250px;
 }
@@ -83,4 +83,7 @@ a.ref.top{
 }
 #wage {
 	width: 100px;
+}
+.ctrl-r-f{
+	margin-left:1em;
 }

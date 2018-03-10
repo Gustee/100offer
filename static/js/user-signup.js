@@ -9,6 +9,7 @@ $("#signup-button-applicant").click(function () {
             $(".error-red-text").text("两次密码输入不同").show();
             return;
         }
+        console.log($('#username').val())
         if (username.length < 5 || password.length < 6) {
             console.log("账号或密码格式不对");
             $(".error-red-text").text("账号或密码格式不对").show();
@@ -47,6 +48,7 @@ $("#signup-button-hr").click(function () {
         $(".error-red-text").text("两次密码输入不同").show();
         return;
     }
+    console.log($('#username').val())
     var companyname = $("#companyname").val();
     var job = $("#job").val();
     var phone = $("#phone").val();

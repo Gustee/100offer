@@ -1,5 +1,15 @@
 //login
 //登录按钮
+$(document).ready(function() {
+    $('.ui.dropdown')
+    .dropdown()
+    ;
+});
+
+
+
+
+
     $("#signin-button").click(function () {
         var username = $("#username").val();
         var password = $("#password").val();

@@ -19,7 +19,8 @@
 			  	<div class="ui segment">
 			   		<div class="header-bar">职业期望</div>
 					<div class="ui divider"></div>
-					<form class="ui form">
+					<form name="career_form" class="ui form" method="post">
+                        {% csrf_tokens %}
 						<div class="required field">
 							<label>您感兴趣的工作类型</label>
 							 <div class="grouped fields">
@@ -39,7 +40,7 @@
 						</div>
 						<div class="required field">
 							<label>以下哪项最符合你目前的状态？</label>
-							 <div class="grouped fields">
+							 <div class="group/home/lin/Offer100ed fields">
 							    <div class="field">
 							      <div class="ui radio checkbox">
 							        <input type="radio" name="state" checked="" tabindex="0" class="hidden">
@@ -166,7 +167,7 @@
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
 								  <input type="checkbox" name="hongkong">
-								  <label>香港</label>
+								  <label>香港</label>{% block body %}
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
 								  <input type="checkbox" name="other">

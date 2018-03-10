@@ -25,7 +25,7 @@ def career_info(request):
     return render(request,'user/career_info.html')
 
 def experience(request):
-    return render(request,'user/experience_info.html')
+    return render(request,'user/experience.html')
 
 def signin(request):
     if(request.method=="POST"):
@@ -46,3 +46,6 @@ def signup(request):
         else:
             ret = {'msg': 0}
         return HttpResponse(json.dumps(ret))
+
+def setting(request):
+    return render(request, 'user/setting.html')

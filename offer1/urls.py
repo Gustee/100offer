@@ -20,6 +20,7 @@ import basic.views as bv
 import user.views as uv
 import job.views as jv
 import resume.views as rv
+import company.views as cv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,10 +33,10 @@ urlpatterns = [
     path('mailconfirmation/',uv.mailConfirmation),
     path('jobs/',jv.jobs),
     path('details/',jv.details),
-    path('personal_info/',uv.personal_info),
-    path('account/',uv.account),
-    path('career_info/',uv.career_info),
-    path('experience/',uv.experience),
+    path('user/personal_info/',uv.personal_info),
+    path('user/account/',uv.account),
+    path('user/career_info/',uv.career_info),
+    path('user/experience/',uv.experience),
     path('resume/basic/',rv.basic),
     path('resume/test/',rv.test),
     path('resume/test2/',rv.test2),
@@ -47,6 +48,11 @@ urlpatterns = [
     path('resume/skill/',rv.skill),
     path('resume/social_media/', rv.social_media),
     path('signin/',uv.signin),
-    path('signup/',uv.signup)
+    path('signup/',uv.signup),
+    path('setting/',uv.setting),
+    path('company/info',cv.info),
+    path('company/new',cv.new),
+    path('company/applicant',cv.applicant),
+    path('company/position',cv.position)
 ]
 
